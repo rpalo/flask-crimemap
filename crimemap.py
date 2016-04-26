@@ -1,3 +1,4 @@
+#!.venv/bin/python
 from dbhelper import DBHelper
 from flask import  Flask, render_template, request
 
