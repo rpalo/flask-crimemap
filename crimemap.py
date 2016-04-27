@@ -1,5 +1,9 @@
 #!.venv/bin/python
-from dbhelper import DBHelper
+import dbconfig
+if dbconfig.test:
+    from mockdbhelper import MockDBHelper as DBHelper
+else:
+    from dbhelper import DBHelper
 from flask import  Flask, render_template, request
 
 app = Flask(__name__)
